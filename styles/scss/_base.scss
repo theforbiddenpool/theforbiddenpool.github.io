@@ -33,3 +33,10 @@ form {
 $navbar-height: 6vh;
 
 /** ===== MIXINS ===== **/
+@mixin arrow-direction($direction) {
+  @if $direction == 'left' {
+    transform: rotate(-45deg);
+  } @else if $direction == 'right' {
+    transform: rotate(135deg);
+  }
+}

@@ -35,3 +35,22 @@
     }
   }
 }
+
+.arrow {
+  border-top: 0.33rem solid black;
+  border-left: 0.33rem solid black;
+  width: 30px;
+  height: 30px;
+
+  &[data-move="left"] {
+    @include arrow-direction('left');
+  }
+
+  &[data-move="right"] {
+    @include arrow-direction('right');
+  }
+
+  &:disabled {
+    border-color: hsla(120, 0, 0, 0.5);
+  }
+}

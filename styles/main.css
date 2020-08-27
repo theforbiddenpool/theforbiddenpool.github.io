@@ -162,3 +162,24 @@ main > section:first-child {
   -webkit-transform: rotate(-35deg);
           transform: rotate(-35deg);
 }
+
+.arrow {
+  border-top: 0.33rem solid black;
+  border-left: 0.33rem solid black;
+  width: 30px;
+  height: 30px;
+}
+
+.arrow[data-move="left"] {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.arrow[data-move="right"] {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.arrow:disabled {
+  border-color: rgba(0, 0, 0, 0.5);
+}
