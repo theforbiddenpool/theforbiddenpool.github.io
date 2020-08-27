@@ -61,9 +61,15 @@ html, body {
   margin: 0;
 }
 
-/** ===== SOME DEFAULTS ===== **/
+/** ===== SOME DEFAULTS & UTILITIES ===== **/
 html {
   scroll-behavior: smooth;
+}
+
+form .required {
+  color: red;
+  font-size: .75rem;
+  vertical-align: super;
 }
 
 /** ===== VARIABLES ===== **/
