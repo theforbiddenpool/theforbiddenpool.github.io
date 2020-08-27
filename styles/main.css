@@ -93,6 +93,20 @@ form .required {
   position: fixed;
 }
 
+.navbar-collapse {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(242, 242, 242, 0.93);
+  position: fixed;
+  opacity: 0;
+  z-index: -1;
+}
+
+.navbar-collapse.show {
+  opacity: 1;
+  z-index: 100;
+}
+
 .hamburger {
   display: -webkit-box;
   display: -ms-flexbox;
