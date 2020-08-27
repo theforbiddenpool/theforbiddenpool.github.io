@@ -25,6 +25,10 @@ form {
   }
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 /** ===== VARIABLES ===== **/
 
 /** ===== MIXINS ===== **/

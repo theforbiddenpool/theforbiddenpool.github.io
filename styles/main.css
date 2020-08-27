@@ -72,5 +72,56 @@ form .required {
   vertical-align: super;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 /** ===== VARIABLES ===== **/
 /** ===== MIXINS ===== **/
+.hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1rem;
+  right: 5%;
+  z-index: 150;
+}
+
+.hamburger:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.hamburger > .bar {
+  background-color: black;
+  width: 1.5rem;
+  height: .15rem;
+  border-radius: .15rem;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all .33s ease-out;
+  transition: all .33s ease-out;
+}
+
+.hamburger.active > .bar:nth-child(1) {
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.hamburger.active > .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active > .bar:nth-child(3) {
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
