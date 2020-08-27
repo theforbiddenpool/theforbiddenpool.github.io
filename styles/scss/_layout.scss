@@ -29,6 +29,10 @@ main > section {
   &:first-child {
     height: 100vh - $navbar-height;
   }
+
+  .section-title {
+    text-align: center;
+  }
 }
 
 #projects {
@@ -38,12 +42,16 @@ main > section {
     position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .projects-slider {
     position: relative;
     width: inherit;
     height: inherit;
+    padding: .5em;
+    flex-grow: 1;
   }
 
   .slider-controls {
@@ -56,6 +64,30 @@ main > section {
 
     & > .arrow {
       cursor: pointer;
+    }
+  }
+
+  .slider-item {
+    .project-description {
+      margin-top: 1em;
+
+      & > p {
+        margin-bottom: 1em;
+      }
+    }
+
+    .project-technologies {
+      ol {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+        grid-gap: .25em .25em;
+      }
+
+      li {
+        background-color: white;
+        text-align: center;
+        padding: .1em;
+      }
     }
   }
 }
