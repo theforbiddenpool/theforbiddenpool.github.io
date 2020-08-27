@@ -1,0 +1,10 @@
+#navbar {
+  height: $navbar-height;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+
+  .hamburger {
+    position: fixed;
+  }
+}

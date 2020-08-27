@@ -78,6 +78,21 @@ form .required {
 
 /** ===== VARIABLES ===== **/
 /** ===== MIXINS ===== **/
+#navbar {
+  height: 6vh;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#navbar .hamburger {
+  position: fixed;
+}
+
 .hamburger {
   display: -webkit-box;
   display: -ms-flexbox;
