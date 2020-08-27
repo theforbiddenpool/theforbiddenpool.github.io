@@ -126,13 +126,14 @@ main > section:first-child {
 }
 
 #projects .projects-slider {
+  position: relative;
   width: inherit;
   height: inherit;
 }
 
 #projects .slider-controls {
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 7.5%;
   display: -webkit-box;
   display: -ms-flexbox;

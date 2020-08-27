@@ -41,13 +41,14 @@ main > section {
   }
 
   .projects-slider {
+    position: relative;
     width: inherit;
     height: inherit;
   }
 
   .slider-controls {
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: (100% - 85%) / 2;
     display: flex;
     justify-content: space-between;
