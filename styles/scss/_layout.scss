@@ -40,6 +40,11 @@ main > section {
     height: 100%;
   }
 
+  .projects-slider {
+    width: inherit;
+    height: inherit;
+  }
+
   .slider-controls {
     position: absolute;
     top: 50%;

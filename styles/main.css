@@ -125,6 +125,11 @@ main > section:first-child {
   height: 100%;
 }
 
+#projects .projects-slider {
+  width: inherit;
+  height: inherit;
+}
+
 #projects .slider-controls {
   position: absolute;
   top: 50%;
@@ -209,4 +214,35 @@ main > section:first-child {
 
 .arrow:disabled {
   border-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-inner .slider-item {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform .5s ease-out;
+  transition: -webkit-transform .5s ease-out;
+  transition: transform .5s ease-out;
+  transition: transform .5s ease-out, -webkit-transform .5s ease-out;
+}
+
+.slider-inner .slider-item.left {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.slider-inner .slider-item.active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
