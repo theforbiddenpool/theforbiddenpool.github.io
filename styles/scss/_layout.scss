@@ -26,10 +26,10 @@
 main > section {
   height: 100vh;
 
-  &:first-child {
+  &:first-of-type {
     height: 100vh - $navbar-height;
   }
-
+  
   .section-title {
     text-align: center;
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
