@@ -32,6 +32,15 @@ main > section {
 
   .section-title {
     text-align: center;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+  }
+
+  .description {
+    margin: 1em 0;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: center;
+    padding: .5em;
   }
 }
 
@@ -88,6 +97,7 @@ main > section {
         background-color: white;
         text-align: center;
         padding: .1em;
+        font-size: .85em;
       }
     }
   }
