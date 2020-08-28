@@ -78,3 +78,24 @@
     }
   }
 }
+
+.socials {
+  width: 100%;
+
+  & > .socials-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .menu-item {
+      margin: 0 .25em;
+      font-size: 1.1rem;
+      transition: all 0.1s ease-out;
+
+      &:hover, &:active {
+        transform: scale(1.2);
+        color: hsl(0, 0, 10);
+      }
+    }
+  }
+}

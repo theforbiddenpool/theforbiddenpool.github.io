@@ -300,3 +300,32 @@ main > section .description {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
+
+.socials {
+  width: 100%;
+}
+
+.socials > .socials-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials > .socials-menu .menu-item {
+  margin: 0 .25em;
+  font-size: 1.1rem;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.socials > .socials-menu .menu-item:hover, .socials > .socials-menu .menu-item:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #1a1a1a;
+}
