@@ -161,6 +161,7 @@ main > section .section-title {
 
 #projects .slider-controls > .arrow {
   cursor: pointer;
+  z-index: 1;
 }
 
 #projects .slider-item .project-description {
