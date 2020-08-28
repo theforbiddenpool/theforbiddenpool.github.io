@@ -11,6 +11,7 @@ p{margin:0;}
 cite {font-style:normal;}
 fieldset{border-width:0; padding:0; margin:0;}
 html, body { padding: 0; margin: 0;}
+textarea { resize: none; }
 
 /** ===== SOME DEFAULTS & UTILITIES ===== **/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;400&display=swap');

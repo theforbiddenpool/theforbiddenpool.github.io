@@ -115,3 +115,18 @@ main > section {
     }
   }
 }
+
+#contact {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+
+    .form-control {
+      display: block;
+      width: 100%;
+      margin: .5em 0 .75em 0;
+    }
+  }
+}

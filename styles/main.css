@@ -62,6 +62,10 @@ html, body {
   margin: 0;
 }
 
+textarea {
+  resize: none;
+}
+
 /** ===== SOME DEFAULTS & UTILITIES ===== **/
 html {
   scroll-behavior: smooth;
@@ -212,6 +216,24 @@ main > section .description {
   text-align: center;
   padding: .1em;
   font-size: .85em;
+}
+
+#contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 85%;
+  margin: 0 auto;
+}
+
+#contact form .form-control {
+  display: block;
+  width: 100%;
+  margin: .5em 0 .75em 0;
 }
 
 .hamburger {
