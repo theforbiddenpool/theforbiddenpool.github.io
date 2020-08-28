@@ -55,7 +55,7 @@ main > section {
     flex-direction: column;
   }
 
-  .projects-slider {
+  .projects-carousel {
     position: relative;
     width: inherit;
     height: inherit;
@@ -63,7 +63,7 @@ main > section {
     flex-grow: 1;
   }
 
-  .slider-controls {
+  .carousel-controls {
     position: absolute;
     top: 15%;
     left: (100% - 85%) / 2;
@@ -77,7 +77,7 @@ main > section {
     }
   }
 
-  .slider-item {
+  .carousel-item {
     .project-img {
       position: relative;
 

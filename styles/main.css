@@ -150,7 +150,7 @@ main > section .description {
           flex-direction: column;
 }
 
-#projects .projects-slider {
+#projects .projects-carousel {
   position: relative;
   width: inherit;
   height: inherit;
@@ -160,7 +160,7 @@ main > section .description {
           flex-grow: 1;
 }
 
-#projects .slider-controls {
+#projects .carousel-controls {
   position: absolute;
   top: 15%;
   left: 7.5%;
@@ -173,16 +173,16 @@ main > section .description {
   width: 85%;
 }
 
-#projects .slider-controls > .arrow {
+#projects .carousel-controls > .arrow {
   cursor: pointer;
   z-index: 1;
 }
 
-#projects .slider-item .project-img {
+#projects .carousel-item .project-img {
   position: relative;
 }
 
-#projects .slider-item .project-img .project-popup {
+#projects .carousel-item .project-img .project-popup {
   position: absolute;
   font-size: 1.5rem;
   text-align: right;
@@ -191,15 +191,15 @@ main > section .description {
   padding: .5em;
 }
 
-#projects .slider-item .project-description {
+#projects .carousel-item .project-description {
   margin-top: 1em;
 }
 
-#projects .slider-item .project-description > p {
+#projects .carousel-item .project-description > p {
   margin-bottom: 1em;
 }
 
-#projects .slider-item .project-technologies ol {
+#projects .carousel-item .project-technologies ol {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(95px, 1fr))[auto-fit];
@@ -207,7 +207,7 @@ main > section .description {
   grid-gap: .25em .25em;
 }
 
-#projects .slider-item .project-technologies li {
+#projects .carousel-item .project-technologies li {
   background-color: white;
   text-align: center;
   padding: .1em;
@@ -283,14 +283,14 @@ main > section .description {
   border-color: rgba(0, 0, 0, 0.5);
 }
 
-.slider-inner {
+.carousel-inner {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.slider-inner .slider-item {
+.carousel-inner .carousel-item {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -304,12 +304,12 @@ main > section .description {
   transition: transform .5s ease-out, -webkit-transform .5s ease-out;
 }
 
-.slider-inner .slider-item.left {
+.carousel-inner .carousel-item.left {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
-.slider-inner .slider-item.active {
+.carousel-inner .carousel-item.active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }

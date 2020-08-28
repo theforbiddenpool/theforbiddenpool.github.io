@@ -18,55 +18,55 @@ function closeMenu(e) {
 hamburger.addEventListener('click', toggleMenu)
 navbarCollapse.addEventListener('click', closeMenu)
 
-const sliderItems = Array.from(document.querySelector('.slider-inner').children)
-const arrows = document.querySelectorAll('.slider-controls .arrow')
-let activeSliderItem = sliderItems.filter(item => item.classList.contains('active'))[0]
+const carouselItems = Array.from(document.querySelector('.carousel-inner').children)
+const arrows = document.querySelectorAll('.carousel-controls .arrow')
+let activeCarouselItem = carouselItems.filter(item => item.classList.contains('active'))[0]
 let nextItem
 
-function handleSliderControls(e) {
+function handleCarouselControls(e) {
   if(e.target.tagName !== 'BUTTON') return
   e.preventDefault()
 
   if(e.target.dataset.move == 'left') {
-    moveSliderToLeft()
+    moveCarouselToLeft()
   } else if(e.target.dataset.move == 'right') {
-    moveSliderToRight()
+    moveCarouselToRight()
   }
 
-  activeSliderItem = nextItem
+  activeCarouselItem = nextItem
   handleDisablingArrows()
 }
 
-function moveSliderToLeft() {
-  nextItem = activeSliderItem.previousElementSibling
+function moveCarouselToLeft() {
+  nextItem = activeCarouselItem.previousElementSibling
 
-  activeSliderItem.classList.remove('active')
+  activeCarouselItem.classList.remove('active')
   nextItem.classList.remove('left')
   nextItem.classList.add('active')
 }
 
-function moveSliderToRight() {
-  nextItem = activeSliderItem.nextElementSibling
+function moveCarouselToRight() {
+  nextItem = activeCarouselItem.nextElementSibling
     
-  activeSliderItem.classList.remove('active')
-  activeSliderItem.classList.add('left')
+  activeCarouselItem.classList.remove('active')
+  activeCarouselItem.classList.add('left')
   nextItem.classList.add('active')
 }
 
 function handleDisablingArrows() {
-  if(activeSliderItem.nextElementSibling == null) {
+  if(activeCarouselItem.nextElementSibling == null) {
     arrows.item(1).disabled = true
   } else {
     arrows.item(1).disabled = false
   }
 
-  if(activeSliderItem.previousElementSibling == null) {
+  if(activeCarouselItem.previousElementSibling == null) {
     arrows.item(0).disabled = true
   } else {
     arrows.item(0).disabled = false
   }
 }
 
-document.querySelector('.slider-controls').addEventListener('click', handleSliderControls)
+document.querySelector('.carousel-controls').addEventListener('click', handleCarouselControls)
 
 handleDisablingArrows()
