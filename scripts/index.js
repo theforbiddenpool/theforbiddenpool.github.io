@@ -24,7 +24,8 @@ let activeSliderItem = sliderItems.filter(item => item.classList.contains('activ
 let nextItem
 
 function handleSliderControls(e) {
-  if(!e.target.classList.contains('arrow')) return
+  if(e.target.tagName !== 'BUTTON') return
+  e.preventDefault()
 
   if(e.target.dataset.move == 'left') {
     moveSliderToLeft()
