@@ -1,6 +1,9 @@
 const navbarCollapse = document.querySelector('.navbar-collapse')
 const hamburger = document.querySelector('.hamburger')
 
+hamburger.addEventListener('click', toggleMenu)
+navbarCollapse.addEventListener('click', closeMenu)
+
 function toggleMenu() {
   document.body.classList.toggle('no-scroll')
   hamburger.classList.toggle('active')
@@ -15,13 +18,12 @@ function closeMenu(e) {
   document.body.classList.remove('no-scroll')
 }
 
-hamburger.addEventListener('click', toggleMenu)
-navbarCollapse.addEventListener('click', closeMenu)
-
 const carouselItems = Array.from(document.querySelector('.carousel-inner').children)
 const arrows = document.querySelectorAll('.carousel-controls .arrow')
 let activeCarouselItem = carouselItems.filter(item => item.classList.contains('active'))[0]
 let nextItem
+
+document.querySelector('.carousel-controls').addEventListener('click', handleCarouselControls)
 
 function handleCarouselControls(e) {
   if(e.target.tagName !== 'BUTTON') return
@@ -67,8 +69,6 @@ function handleDisablingArrows() {
   }
 }
 
-document.querySelector('.carousel-controls').addEventListener('click', handleCarouselControls)
-
 handleDisablingArrows()
 
 const contactForm = document.querySelector('.contact-form form')
@@ -83,7 +83,7 @@ function handleFormSubmission(e) {
   } else {
     handleInvalidInput()
   }
-  
+
   contactForm.classList.add('was-validated')
 }
 
