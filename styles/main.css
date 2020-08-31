@@ -262,6 +262,13 @@ main > section .description {
   margin-top: .5em;
 }
 
+#contact form button[type="submit"] {
+  width: 100%;
+  padding: .75em 0;
+  background-color: lightgreen;
+  border-radius: .25em;
+}
+
 .hamburger {
   display: -webkit-box;
   display: -ms-flexbox;
