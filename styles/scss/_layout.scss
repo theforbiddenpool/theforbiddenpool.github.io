@@ -111,6 +111,10 @@ main > section {
         text-align: center;
         padding: .1em;
         font-size: .85em;
+
+        .tag {
+          display: block;
+        }
       }
     }
   }

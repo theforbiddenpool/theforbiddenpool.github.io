@@ -218,6 +218,10 @@ main > section .description {
   font-size: .85em;
 }
 
+#projects .carousel-item .project-technologies li .tag {
+  display: block;
+}
+
 #contact .description {
   margin-top: 0;
   padding-top: 1em;
