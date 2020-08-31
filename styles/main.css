@@ -230,10 +230,36 @@ main > section .description {
   margin: 0 auto;
 }
 
+#contact form.was-validated .form-control:invalid {
+  border: 1px solid red;
+}
+
+#contact form.was-validated .form-control:invalid + .invalid-feedback {
+  display: block;
+}
+
+#contact form .form-item {
+  margin-bottom: .75em;
+}
+
 #contact form .form-control {
   display: block;
   width: 100%;
-  margin: .5em 0 .75em 0;
+  margin-top: .5em;
+  border: 1px solid lightgrey;
+  padding: .5em;
+  border-radius: .33em;
+}
+
+#contact form .form-control:focus {
+  border: 1px solid lightskyblue;
+}
+
+#contact form .invalid-feedback {
+  display: none;
+  font-size: .8rem;
+  color: red;
+  margin-top: .5em;
 }
 
 .hamburger {

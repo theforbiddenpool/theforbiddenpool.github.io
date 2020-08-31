@@ -70,3 +70,50 @@ function handleDisablingArrows() {
 document.querySelector('.carousel-controls').addEventListener('click', handleCarouselControls)
 
 handleDisablingArrows()
+
+const contactForm = document.querySelector('.contact-form form')
+
+contactForm.addEventListener('submit', handleFormSubmission)
+
+function handleFormSubmission(e) {
+  e.preventDefault()
+
+  if(this.checkValidity()) {
+
+  } else {
+    handleInvalidInput()
+  }
+  
+  contactForm.classList.add('was-validated')
+}
+
+function handleInvalidInput() {
+  const invalidFields = []
+
+  contactForm.querySelectorAll(':invalid').forEach(control => {
+    for(const key in control.validity) {
+      if(control.validity[key]) {
+        invalidFields.push({ name: control.name, el: control, error: key })
+      }
+    }
+  })
+
+  invalidFields.forEach(control => {
+    control.el.nextElementSibling.innerText = getInvalidText(control)
+  })
+}
+
+function getInvalidText(input) {
+  switch (input.error) {
+    case 'tooLong':
+      return `${input.name} is too long.` ;break
+
+    case 'typeMismatch':
+    case 'patternMismatch':
+      return `Please enter a valid ${input.name}.` ;break
+
+    case 'valueMissing':
+      return `Please entre your ${input.name}.` ;break
+    default: '' ;break
+  }
+}
