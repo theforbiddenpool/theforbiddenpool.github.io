@@ -72,6 +72,39 @@ function handleDisablingArrows() {
 
 handleDisablingArrows()
 
+/** DRAG ACTION CAROUSEL */
+let startX
+let movedOneSlide = false
+
+carousel.addEventListener('touchstart', (e) => {
+  startX = e.changedTouches[0].clientX
+})
+carousel.addEventListener('touchmove', handleDragMovement)
+carousel.addEventListener('transitionend', () => {
+  movedOneSlide = false
+})
+
+function handleDragMovement(e) {
+  if(Math.abs(startX - e.changedTouches[0].clientX) < (window.screen.width / 4))
+    return
+  
+  if(movedOneSlide)
+    return
+
+  if(startX > e.changedTouches[0].clientX) { // move to the right
+    if(!activeCarouselItem.nextElementSibling) return
+    
+    moveCarouselToRight()
+  } else { // move to the left
+    if(!activeCarouselItem.previousElementSibling) return
+    moveCarouselToLeft()
+  }
+  movedOneSlide = true
+    
+  activeCarouselItem = nextItem
+  handleDisablingArrows()
+}
+
 const contactForm = document.querySelector('.contact-form form')
 
 contactForm.addEventListener('submit', handleFormSubmission)
