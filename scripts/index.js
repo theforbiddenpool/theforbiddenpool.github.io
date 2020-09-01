@@ -18,12 +18,13 @@ function closeMenu(e) {
   document.body.classList.remove('no-scroll')
 }
 
-const carouselItems = Array.from(document.querySelector('.carousel-inner').children)
-const arrows = document.querySelectorAll('.carousel-controls .arrow')
+const carousel = document.querySelector('.projects-carousel')
+const carouselItems = Array.from(carousel.querySelector('.carousel-inner').children)
+const arrows = carousel.querySelectorAll('.carousel-controls .arrow')
 let activeCarouselItem = carouselItems.filter(item => item.classList.contains('active'))[0]
 let nextItem
 
-document.querySelector('.carousel-controls').addEventListener('click', handleCarouselControls)
+carousel.querySelector('.carousel-controls').addEventListener('click', handleCarouselControls)
 
 function handleCarouselControls(e) {
   if(e.target.tagName !== 'BUTTON') return
