@@ -174,9 +174,15 @@ main > section {
 }
 
 #contact {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
   .description {
     margin-top: 0;
-    padding-top: 1em; // fixes bug that makes container bigger than 100vh
   }
 
   form {
