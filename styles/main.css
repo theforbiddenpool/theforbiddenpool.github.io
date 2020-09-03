@@ -434,6 +434,8 @@ main > section .description {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #contact .description {
@@ -452,12 +454,59 @@ main > section .description {
   z-index: -1;
 }
 
+#contact .contact-arrow {
+  font-size: 1.2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 1em;
+  padding: .75em 0;
+  cursor: pointer;
+}
+
+#contact .contact-arrow > i {
+  margin-left: .33em;
+}
+
 #contact .contact-form {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
+  display: none;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  background-color: white;
+}
+
+#contact .contact-form #contact-form-close {
+  margin-top: 1em;
+}
+
+#contact .contact-form.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact .contact-form.active {
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 
 #contact form {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

@@ -105,7 +105,8 @@ function handleDragMovement(e) {
   handleDisablingArrows()
 }
 
-const contactForm = document.querySelector('.contact-form form')
+const contactFormWrapper = document.querySelector('#contact .contact-form')
+const contactForm = contactFormWrapper.querySelector('form')
 
 contactForm.addEventListener('submit', handleFormSubmission)
 
@@ -151,5 +152,21 @@ function getInvalidText(input) {
     default: '' ;break
   }
 }
+
+document.querySelector('#contact-form-open').addEventListener('click', () => {
+  contactFormWrapper.classList.add('show')
+  contactFormWrapper.getBoundingClientRect()
+  contactFormWrapper.classList.add('active')
+})
+
+document.querySelector('#contact-form-close').addEventListener('click', () => {
+  contactFormWrapper.classList.remove('active')
+})
+
+contactFormWrapper.addEventListener('transitionend', function() {
+  if(this.classList.contains('active')) return
+  
+  contactFormWrapper.classList.remove('show')
+})
 
 document.querySelector('#owl-animation').play()
