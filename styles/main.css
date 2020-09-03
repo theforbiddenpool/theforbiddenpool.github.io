@@ -438,6 +438,15 @@ main > section .description {
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 576px) {
+  #contact .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 #contact .description {
   margin-top: 0;
 }
@@ -467,6 +476,12 @@ main > section .description {
   margin-left: .33em;
 }
 
+@media screen and (min-width: 576px) {
+  #contact .contact-arrow {
+    display: none;
+  }
+}
+
 #contact .contact-form {
   width: 100%;
   height: 100%;
@@ -479,6 +494,15 @@ main > section .description {
   transition: transform 0.5s ease-out;
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
   background-color: white;
+}
+
+@media screen and (min-width: 576px) {
+  #contact .contact-form {
+    display: block;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    position: static;
+  }
 }
 
 #contact .contact-form #contact-form-close {

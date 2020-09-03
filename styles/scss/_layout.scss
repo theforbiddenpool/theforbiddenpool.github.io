@@ -264,6 +264,10 @@ main > section {
     height: 100%;
     position: relative;
     overflow-x: hidden;
+
+    @include media-breakpoint($mb-sm) {
+      flex-direction: row;
+    }
   }
 
   .description {
@@ -290,6 +294,10 @@ main > section {
     & > i {
       margin-left: .33em;
     }
+    
+    @include media-breakpoint($mb-sm) {
+      display: none;
+    }
   }
 
   .contact-form {
@@ -300,6 +308,12 @@ main > section {
     display: none;
     transition: transform 0.5s ease-out;
     background-color: white;
+
+    @include media-breakpoint($mb-sm) {
+      display: block;
+      transform: translate(0);
+      position: static;
+    }
 
     #contact-form-close {
       margin-top: 1em;
