@@ -151,3 +151,5 @@ function getInvalidText(input) {
     default: '' ;break
   }
 }
+
+document.querySelector('#owl-animation').play()

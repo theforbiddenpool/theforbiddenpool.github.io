@@ -266,6 +266,16 @@ main > section {
 
   .description {
     margin-top: 0;
+
+    & > p {
+      margin-bottom: 1em;
+    }
+  }
+
+  .background-image {
+    transform: rotate(90deg);
+    align-self: flex-start;
+    z-index: -1;
   }
 
   .contact-form {
@@ -273,7 +283,7 @@ main > section {
   }
 
   form {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 85%;
     margin: 0 auto;
