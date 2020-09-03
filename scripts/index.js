@@ -74,6 +74,7 @@ handleDisablingArrows()
 
 /** DRAG ACTION CAROUSEL */
 let startX
+let mouseDown = false
 let movedOneSlide = false
 
 carousel.addEventListener('touchstart', (e) => {
@@ -85,13 +86,20 @@ carousel.addEventListener('transitionend', () => {
 })
 
 function handleDragMovement(e) {
-  if(Math.abs(startX - e.changedTouches[0].clientX) < (window.screen.width / 4))
+  const clientX = e.clientX || e.changedTouches[0].clientX
+  const moveRatio = (e.type == 'mousemove') ? 20 : 4
+
+  if(e.type == 'mousemove') {
+    if(!mouseDown) return
+  }
+
+  if(Math.abs(startX - clientX) < (window.screen.width / moveRatio))
     return
   
   if(movedOneSlide)
     return
 
-  if(startX > e.changedTouches[0].clientX) { // move to the right
+  if(startX > clientX) { // move to the right
     if(!activeCarouselItem.nextElementSibling) return
     
     moveCarouselToRight()
@@ -104,6 +112,19 @@ function handleDragMovement(e) {
   activeCarouselItem = nextItem
   handleDisablingArrows()
 }
+
+carousel.addEventListener('mousedown', (e) => {
+  mouseDown = true
+  startX = e.clientX
+})
+carousel.addEventListener('mousemove', handleDragMovement)
+carousel.addEventListener('mouseup', handleMouseUp)
+carousel.addEventListener('mouseout', handleMouseUp)
+
+function handleMouseUp() {
+  mouseDown = false
+}
+
 
 const contactFormWrapper = document.querySelector('#contact .contact-form')
 const contactForm = contactFormWrapper.querySelector('form')
