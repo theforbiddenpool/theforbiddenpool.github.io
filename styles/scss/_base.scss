@@ -34,6 +34,10 @@ form {
 
 .no-scroll {
   overflow-y: hidden;
+
+  main {
+    filter: blur(1px);
+  }
 }
 
 /** ===== VARIABLES ===== **/
