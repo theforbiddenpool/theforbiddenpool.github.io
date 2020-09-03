@@ -189,5 +189,3 @@ contactFormWrapper.addEventListener('transitionend', function() {
   
   contactFormWrapper.classList.remove('show')
 })
-
-document.querySelector('#owl-animation').play()
