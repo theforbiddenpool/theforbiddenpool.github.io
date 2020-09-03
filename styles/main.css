@@ -503,7 +503,7 @@ main > section .description {
           transform: translate(0);
 }
 
-#contact form {
+#contact .contact-form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,24 +516,24 @@ main > section .description {
 }
 
 @media screen and (min-width: 576px) {
-  #contact form {
+  #contact .contact-form form {
     max-width: 400px;
   }
 }
 
-#contact form.was-validated .form-control:invalid {
+#contact .contact-form form.was-validated .form-control:invalid {
   border: 1px solid red;
 }
 
-#contact form.was-validated .form-control:invalid + .invalid-feedback {
+#contact .contact-form form.was-validated .form-control:invalid + .invalid-feedback {
   display: block;
 }
 
-#contact form .form-item {
+#contact .contact-form form .form-item {
   margin-bottom: .75em;
 }
 
-#contact form .form-control {
+#contact .contact-form form .form-control {
   display: block;
   width: 100%;
   margin-top: .5em;
@@ -542,18 +542,18 @@ main > section .description {
   border-radius: .33em;
 }
 
-#contact form .form-control:focus {
+#contact .contact-form form .form-control:focus {
   border: 1px solid lightskyblue;
 }
 
-#contact form .invalid-feedback {
+#contact .contact-form form .invalid-feedback {
   display: none;
   font-size: .8rem;
   color: red;
   margin-top: .5em;
 }
 
-#contact form button[type="submit"] {
+#contact .contact-form form button[type="submit"] {
   width: 100%;
   padding: .75em 0;
   background-color: lightgreen;
