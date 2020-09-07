@@ -49,6 +49,8 @@ $mb-md: 768px;
 $mb-lg: 992px;
 $mb-xl: 1200px;
 
+$mb-hb: 500px;
+
 /** ===== MIXINS ===== **/
 @mixin arrow-direction($direction) {
   @if $direction == 'left' {
