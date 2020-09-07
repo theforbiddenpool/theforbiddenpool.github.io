@@ -44,7 +44,6 @@ form {
 $navbar-height: 6vh;
 
 $mb-sm: 576px;
-$mb-xmd: 640px;
 $mb-md: 768px;
 $mb-lg: 992px;
 $mb-xl: 1200px;
@@ -60,14 +59,14 @@ $mb-hb: 500px;
   }
 }
 
-@mixin media-breakpoint($min-width, $max-height: 0) {
-  @if $max-height != 0 {
-    @media screen and (min-width: #{$min-width}) and (max-height: #{$max-height}) {
-      @content
-    }
-  } @else {
-    @media screen and (min-width: #{$min-width}) {
-      @content
-    }
+@mixin media-breakpoint($min-size) {
+  @media screen and (min-width: #{$min-size}) {
+    @content
+  }
+}
+
+@mixin media-breakpoint-landscape() {
+  @media screen and (min-width: 500px) and (max-height: 500px) {
+    @content
   }
 }
