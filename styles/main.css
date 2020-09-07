@@ -107,7 +107,7 @@ form .required {
   position: fixed;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   #navbar .hamburger {
     display: none;
   }
@@ -117,7 +117,7 @@ form .required {
   display: none;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   #navbar .navbar-normal {
     display: block;
   }
@@ -146,7 +146,7 @@ form .required {
   z-index: -1;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   .navbar-collapse {
     display: none;
   }
@@ -240,7 +240,7 @@ main > section .description {
   padding: .5em;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   main > section .description {
     max-width: 550px;
   }
@@ -387,7 +387,7 @@ main > section .description {
   position: relative;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   #projects .carousel-item .project-img {
     width: 85%;
   }
@@ -412,7 +412,7 @@ main > section .description {
   margin-top: 1em;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   #projects .carousel-item .project-description {
     width: 85%;
   }
@@ -441,7 +441,7 @@ main > section .description {
   width: 100%;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   #projects .carousel-item .project-technologies {
     width: 85%;
     margin-top: 1em;
@@ -495,7 +495,7 @@ main > section .description {
   position: relative;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   #contact .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -533,7 +533,7 @@ main > section .description {
   margin-left: .33em;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   #contact .contact-arrow {
     display: none;
   }
@@ -553,7 +553,7 @@ main > section .description {
   background-color: white;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   #contact .contact-form {
     display: block;
     -webkit-transform: translate(0);
@@ -596,7 +596,7 @@ main > section .description {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) and (min-height: 500px) {
   #contact .contact-form form {
     max-width: 400px;
   }

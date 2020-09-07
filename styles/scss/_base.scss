@@ -60,7 +60,7 @@ $mb-hb: 500px;
 }
 
 @mixin media-breakpoint($min-size) {
-  @media screen and (min-width: #{$min-size}) {
+  @media screen and (min-width: #{$min-size}) and (min-height: 500px) {
     @content
   }
 }
