@@ -89,7 +89,7 @@ function handleDragMovement(e) {
   const clientX = e.clientX || e.changedTouches[0].clientX
   const moveRatio = (e.type == 'mousemove') ? 20 : 4
 
-  if(e.type == 'mousemove') {
+  if(e.type !== 'touchmove') {
     if(!mouseDown) return
   }
 
@@ -124,7 +124,6 @@ carousel.addEventListener('mouseout', handleMouseUp)
 function handleMouseUp() {
   mouseDown = false
 }
-
 
 const contactFormWrapper = document.querySelector('#contact .contact-form')
 const contactForm = contactFormWrapper.querySelector('form')
