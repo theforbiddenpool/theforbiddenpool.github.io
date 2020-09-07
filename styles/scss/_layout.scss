@@ -295,10 +295,6 @@ main > section {
 
 #contact {
   .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     position: relative;
 
@@ -309,6 +305,7 @@ main > section {
 
   .description {
     margin-top: 0;
+    padding-top: 10vh;
 
     & > p {
       margin-bottom: 1em;
@@ -318,18 +315,34 @@ main > section {
   .background-image {
     transform: rotate(90deg);
     align-self: flex-start;
+    bottom: 5vh;
     z-index: -1;
+    position: absolute;
   }
 
   .contact-arrow {
     font-size: 1.2rem;
-    align-self: flex-end;
     margin-right: 1em;
     padding: .75em 0;
     cursor: pointer;
+    word-spacing: 99999999px;
+    position: absolute;
+    right: 0;
+    bottom: 5vh;
+    z-index: 1;
 
-    .arrow-form {
-      display: none;
+    button {
+      width: min-intrinsic;
+      width: -webkit-min-content;
+      width: -moz-min-content;
+      width: min-content;
+      display: table-caption;
+      display: -ms-grid;
+      -ms-grid-columns: min-content;
+
+      .arrow-form {
+        display: none;
+      }
     }
 
     &[data-state="closed"] .arrow-form.open {
@@ -338,10 +351,6 @@ main > section {
 
     &[data-state="opened"] .arrow-form.close {
       display: inline;
-    }
-
-    & > i {
-      margin-left: .33em;
     }
     
     @include media-breakpoint($mb-sm) {
@@ -353,10 +362,13 @@ main > section {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
     transform: translate(100%);
     display: none;
     transition: transform 0.5s ease-out;
     background-color: white;
+    padding-top: 2em;
 
     @include media-breakpoint($mb-sm) {
       display: block;
@@ -367,7 +379,6 @@ main > section {
     &.show {
       display: flex;
       flex-direction: column;
-      justify-content: center;
     }
     
     &.active {
