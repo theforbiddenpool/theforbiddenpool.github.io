@@ -301,7 +301,6 @@ main > section {
     align-items: center;
     height: 100%;
     position: relative;
-    overflow-x: hidden;
 
     @include media-breakpoint($mb-sm) {
       flex-direction: row;
