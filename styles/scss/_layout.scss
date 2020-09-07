@@ -50,6 +50,7 @@
   
   .container {
     height: 40%;
+    min-height: 230px;
     background-color: hsla(206, 0, 95, 1);
     display: flex;
     flex-direction: column;
@@ -91,6 +92,10 @@ main > section {
 
   &:first-of-type {
     height: 100vh - $navbar-height;
+  }
+
+  & > .container {
+    overflow: hidden;
   }
   
   .section-title {
@@ -144,8 +149,8 @@ main > section {
 
         & > img {
           height: 100%;
-          max-width: 350px;
-          max-height: 413.7px;
+          max-width: 300px;
+          max-height: 354.4px;
         }
       }
 

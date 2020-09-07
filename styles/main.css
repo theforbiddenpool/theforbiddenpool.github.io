@@ -159,6 +159,7 @@ form .required {
 
 .navbar-collapse .container {
   height: 40%;
+  min-height: 230px;
   background-color: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,6 +215,10 @@ main > section {
 
 main > section:first-of-type {
   height: 94vh;
+}
+
+main > section > .container {
+  overflow: hidden;
 }
 
 main > section .section-title {
@@ -280,8 +285,8 @@ main > section .description {
   }
   #about .container .profile-picture > img {
     height: 100%;
-    max-width: 350px;
-    max-height: 413.7px;
+    max-width: 300px;
+    max-height: 354.4px;
   }
   #about .container .socials {
     -ms-grid-column: 2;
