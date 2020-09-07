@@ -328,6 +328,18 @@ main > section {
     padding: .75em 0;
     cursor: pointer;
 
+    .arrow-form {
+      display: none;
+    }
+
+    &[data-state="closed"] .arrow-form.open {
+      display: inline;
+    }
+
+    &[data-state="opened"] .arrow-form.close {
+      display: inline;
+    }
+
     & > i {
       margin-left: .33em;
     }
@@ -350,10 +362,6 @@ main > section {
       display: block;
       transform: translate(0);
       position: static;
-    }
-
-    #contact-form-close {
-      margin-top: 1em;
     }
     
     &.show {

@@ -529,6 +529,18 @@ main > section .description {
   cursor: pointer;
 }
 
+#contact .contact-arrow .arrow-form {
+  display: none;
+}
+
+#contact .contact-arrow[data-state="closed"] .arrow-form.open {
+  display: inline;
+}
+
+#contact .contact-arrow[data-state="opened"] .arrow-form.close {
+  display: inline;
+}
+
 #contact .contact-arrow > i {
   margin-left: .33em;
 }
@@ -560,10 +572,6 @@ main > section .description {
             transform: translate(0);
     position: static;
   }
-}
-
-#contact .contact-form #contact-form-close {
-  margin-top: 1em;
 }
 
 #contact .contact-form.show {

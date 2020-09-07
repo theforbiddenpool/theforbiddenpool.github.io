@@ -213,9 +213,16 @@
               <source src="assets/owl.webm" type="video/webm">
             </video>
           </div>
-          <div class="contact-arrow" id="contact-form-open">
-            <button type="button" data-action="open">
-              <i class="fas fa-arrow-left"></i> Open form
+          <div class="contact-arrow" id="contact-form-open" data-state="closed">
+            <button type="button">
+              <span class="arrow-form open">
+                <i class="fas fa-arrow-left"></i>
+                Open form
+              </span>
+              <span class="arrow-form close">
+                <i class="fas fa-arrow-right"></i>
+                Close form
+              </span>
             </button>
           </div>
           <div class="contact-form">
@@ -241,11 +248,6 @@
               </div>
               <button type="submit">Send</button>
             </form>
-            <div class="contact-arrow" id="contact-form-close">
-              <button type="button">
-                Close form <i class="fas fa-arrow-right"></i>
-              </button>
-            </div>
           </div>
         </div>
       </section>

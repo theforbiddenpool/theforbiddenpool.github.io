@@ -173,14 +173,16 @@ function getInvalidText(input) {
   }
 }
 
-document.querySelector('#contact-form-open').addEventListener('click', () => {
-  contactFormWrapper.classList.add('show')
-  contactFormWrapper.getBoundingClientRect()
-  contactFormWrapper.classList.add('active')
-})
-
-document.querySelector('#contact-form-close').addEventListener('click', () => {
-  contactFormWrapper.classList.remove('active')
+document.querySelector('#contact-form-open').addEventListener('click', function() {
+  if(contactFormWrapper.classList.contains('active')) {
+    contactFormWrapper.classList.remove('active')
+    this.dataset.state = 'closed'
+  } else {
+    contactFormWrapper.classList.add('show')
+    contactFormWrapper.getBoundingClientRect()
+    contactFormWrapper.classList.add('active')
+    this.dataset.state = 'opened'
+  }
 })
 
 contactFormWrapper.addEventListener('transitionend', function() {
