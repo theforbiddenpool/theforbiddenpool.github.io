@@ -408,6 +408,12 @@ main > section .description {
   padding: .5em;
 }
 
+@media screen and (min-width: 576px) and (min-height: 500px) {
+  #projects .carousel-item .project-img .project-popup {
+    font-size: 2rem;
+  }
+}
+
 #projects .carousel-item .project-description {
   margin-top: 1em;
 }

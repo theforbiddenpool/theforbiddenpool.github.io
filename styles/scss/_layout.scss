@@ -238,6 +238,10 @@ main > section {
         bottom: 0;
         right: 0;
         padding: .5em;
+
+        @include media-breakpoint($mb-sm) {
+          font-size: 2rem;
+        }
       }
     }
 
