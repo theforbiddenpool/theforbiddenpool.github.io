@@ -20,9 +20,10 @@ function closeMenu(e) {
 
 const carousel = document.querySelector('.projects-carousel')
 const carouselItems = Array.from(carousel.querySelector('.carousel-inner').children)
-const arrows = carousel.querySelectorAll('.carousel-controls .arrow')
+const indicators = carousel.querySelectorAll('.carousel-controls .carousel-indicator')
 let activeCarouselItem = carouselItems.filter(item => item.classList.contains('active'))[0]
 let nextItem
+let movedOneSlide = false
 
 carousel.querySelector('.carousel-controls').addEventListener('click', handleCarouselControls)
 
@@ -30,60 +31,69 @@ function handleCarouselControls(e) {
   if(e.target.tagName !== 'BUTTON') return
   e.preventDefault()
 
-  if(e.target.dataset.move == 'left') {
-    moveCarouselToLeft()
-  } else if(e.target.dataset.move == 'right') {
-    moveCarouselToRight()
-  }
+  nextItem = carouselItems[e.target.dataset.slideto]
 
-  activeCarouselItem = nextItem
-  handleDisablingArrows()
+  if(activeCarouselItem == nextItem) return
+
+  if(carouselItems.indexOf(activeCarouselItem) > carouselItems.indexOf(nextItem)) {
+    moveCarouselToRight()
+  } else {
+    moveCarouselToLeft()
+  }  
+
+  handleIndicatorChange()
 }
 
-function moveCarouselToLeft() {
-  nextItem = activeCarouselItem.previousElementSibling
+function handleIndicatorChange() {
+  for (const indicator of indicators) {
+    if(indicator.classList.contains('active')) {
+      indicator.classList.remove('active')
+      continue
+    }
 
-  activeCarouselItem.classList.remove('active')
-  nextItem.classList.remove('left')
-  nextItem.classList.add('active')
+    if(indicator.dataset.slideto == carouselItems.indexOf(nextItem)){
+      indicator.classList.add('active')
+    }
+  }
+}
+
+function handleTransitionEnd(e) {
+  if(e.target == nextItem) {
+    nextItem.classList.add('active')
+    nextItem.classList.remove('carousel-item-next', 'carousel-item-prev', 'carousel-item-left', 'carousel-item-right')
+  } else if(e.target == activeCarouselItem) {
+    activeCarouselItem.classList.remove('carousel-item-left', 'carousel-item-right', 'active')
+    activeCarouselItem = nextItem
+  }
+
+  movedOneSlide = false
+}
+
+
+function moveCarouselToLeft() {
+  nextItem.classList.add('carousel-item-next')
+  nextItem.getBoundingClientRect()
+  nextItem.classList.add('carousel-item-left')
+  activeCarouselItem.classList.add('carousel-item-left')
 }
 
 function moveCarouselToRight() {
-  nextItem = activeCarouselItem.nextElementSibling
-    
-  activeCarouselItem.classList.remove('active')
-  activeCarouselItem.classList.add('left')
-  nextItem.classList.add('active')
+  nextItem.classList.add('carousel-item-prev')
+  nextItem.getBoundingClientRect()
+  nextItem.classList.add('carousel-item-right')
+  activeCarouselItem.classList.add('carousel-item-right')
 }
 
-function handleDisablingArrows() {
-  if(activeCarouselItem.nextElementSibling == null) {
-    arrows.item(1).disabled = true
-  } else {
-    arrows.item(1).disabled = false
-  }
-
-  if(activeCarouselItem.previousElementSibling == null) {
-    arrows.item(0).disabled = true
-  } else {
-    arrows.item(0).disabled = false
-  }
-}
-
-handleDisablingArrows()
+carousel.addEventListener('transitionend', handleTransitionEnd)
 
 /** DRAG ACTION CAROUSEL */
 let startX
 let mouseDown = false
-let movedOneSlide = false
 
 carousel.addEventListener('touchstart', (e) => {
   startX = e.changedTouches[0].clientX
 })
 carousel.addEventListener('touchmove', handleDragMovement)
-carousel.addEventListener('transitionend', () => {
-  movedOneSlide = false
-})
 
 function handleDragMovement(e) {
   const clientX = e.clientX || e.changedTouches[0].clientX
@@ -99,18 +109,20 @@ function handleDragMovement(e) {
   if(movedOneSlide)
     return
 
-  if(startX > clientX) { // move to the right
+  if(startX > clientX) {
     if(!activeCarouselItem.nextElementSibling) return
     
-    moveCarouselToRight()
-  } else { // move to the left
-    if(!activeCarouselItem.previousElementSibling) return
+    nextItem = activeCarouselItem.nextElementSibling
     moveCarouselToLeft()
+  } else {
+    if(!activeCarouselItem.previousElementSibling) return
+
+    nextItem = activeCarouselItem.previousElementSibling
+    moveCarouselToRight()
   }
   movedOneSlide = true
-    
-  activeCarouselItem = nextItem
-  handleDisablingArrows()
+
+  handleIndicatorChange()
 }
 
 carousel.addEventListener('mousedown', (e) => {
