@@ -300,7 +300,9 @@ main > section {
 
     @include media-breakpoint($mb-sm) {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -325,6 +327,13 @@ main > section {
       bottom: 0;
       margin-bottom: -75px;
       left: 5vw;
+    }
+
+    @include media-breakpoint($mb-sm) {
+      transform: rotate(0);
+      bottom: 0;
+      left: 70vw;
+      margin-bottom: -5px;
     }
   }
 
@@ -386,6 +395,7 @@ main > section {
       display: block;
       transform: translate(0);
       position: static;
+      background: none;
     }
     
     &.show {
