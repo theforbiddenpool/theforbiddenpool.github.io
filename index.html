@@ -4,13 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/styles/main.scss">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
   <script src="https://unpkg.com/vue@next"></script>
   <title>theforbiddenpool</title>
 </head>
 <body>
-  <div id="app">
-    <h1>{{ text }}</h1>
-  </div>
+  <section id="home" aria-label="intro section">
+    <div class="profile-picture">
+      <img src="assets/owl-profile.gif" alt="profile picture">
+    </div>
+    <div class="profile-title">
+      <h2>Frontend Web Developer</h2>
+    </div>
+    <div class="socials-menu">
+      <ul class="menu-inline" aria-label="social networks">
+        <li class="menu-item">
+          <a href="mailto:contact@theforbiddenpool.com" class="menu-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </li>
+        <li class="menu-item">
+          <a href="https://github.com/theforbiddenpool" class="menu-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </li>
+        <li class="menu-item">
+          <a href="https://www.linkedin.com/in/ctlmonteiro" class="menu-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link" aria-label="CodePen"><i class="fab fa-codepen"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="down-arrow" id="move-down">
+      <button type="button" aria-label="move to next section">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.028 0v6.425l5.549 5.575-5.549 5.575v6.425l11.944-12z"/></svg>
+      </button>
+    </div>
+  </section>
   <script src="src/main.js"></script>
 </body>
 </html>

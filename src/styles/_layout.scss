@@ -1,0 +1,42 @@
+@use 'base' as b;
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2em 2em 1em 2em;
+  position: relative;
+
+  .profile-picture > img {
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid b.$black;
+  }
+
+  .profile-title {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.25rem;
+    text-align: center;
+    border-top: 1px solid b.$black;
+    border-bottom: 1px solid b.$black;
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .down-arrow {
+    position: absolute;
+    bottom: 3%;
+    box-sizing: content-box;
+
+    & > button {
+      border: 0;
+      background: none;
+      padding: 1em 1em .5em 1em;
+      cursor: pointer;
+      @extend %anim-up-down;
+    }
+  }
+}

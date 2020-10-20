@@ -1,1 +1,39 @@
-@import 'normalize.css'
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+$dark-blue: #173d62;
+$main-blue: #478fd4;
+$light-blue: #8ab7e3;
+$orange: #ff902e;
+$light-orange: #e3cb8a;
+$black: #000;
+$white: #fff;
+$grey: #ccc;
+$light-grey: #f0f0f0;
+
+%anim-up-down {
+  animation-name: move-down-up;
+  animation-iteration-count: infinite;
+  animation-duration: 1.25s;
+
+  @keyframes move-down-up {
+    0%, 100% {
+      transform: translateY(0);
+    }
+  
+    60% {
+      transform: translateY(5px);
+    }
+  
+    90% {
+      transform: translateY(-2px);
+    }
+  }
+}

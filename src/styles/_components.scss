@@ -1,0 +1,31 @@
+@use 'base' as b;
+
+.down-arrow svg {
+  transform: rotate(90deg);
+}
+
+.menu-inline {
+  display: inline-flex;
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.25rem;
+
+  .menu-item {
+    padding: 0 .33em;
+    transition: transform .3s ease-out;
+
+    &:hover, &:active {
+      transform: scale(1.1);
+    }
+  }
+
+  .menu-link {
+    text-decoration: none;
+    color: b.$main-blue;
+    transition: color .3s ease-out;
+
+    &:hover, &:active {
+      color: b.$dark-blue;
+    }
+  }
+}
