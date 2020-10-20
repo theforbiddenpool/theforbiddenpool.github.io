@@ -18,6 +18,12 @@ $white: #fff;
 $grey: #ccc;
 $light-grey: #f0f0f0;
 
+@mixin mdb-landscape() {
+  @media screen and (max-height: 500px) {
+    @content
+  }
+}
+
 %anim-up-down {
   animation-name: move-down-up;
   animation-iteration-count: infinite;

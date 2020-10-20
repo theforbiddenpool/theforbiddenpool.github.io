@@ -9,6 +9,21 @@
   padding: 2em 2em 1em 2em;
   position: relative;
 
+  @include b.mdb-landscape() {
+    display: grid;
+    grid-template: repeat(2, 1fr) / 250px 1fr;
+    grid-column-gap: 1.5em;
+    justify-items: center;
+
+    .profile-picture {
+      grid-row: 1 / 3;
+    }
+
+    .socials-menu {
+      align-self: start;
+    }
+  }
+
   .profile-picture > img {
     height: 250px;
     border-radius: 50%;
@@ -29,7 +44,6 @@
   .down-arrow {
     position: absolute;
     bottom: 3%;
-    box-sizing: content-box;
 
     & > button {
       border: 0;
