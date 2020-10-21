@@ -29,3 +29,16 @@
     }
   }
 }
+
+.card {
+  background-color: b.$dark-blue;
+  color: b.$white;
+
+  &-img {
+    width: 100%;
+  }
+
+  &-title {
+    padding: .75em;
+  }
+}

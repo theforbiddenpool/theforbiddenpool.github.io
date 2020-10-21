@@ -39,6 +39,20 @@
       </button>
     </div>
   </section>
-  <script src="src/main.js"></script>
+  <section id="projects" aria-labelledby="label-pg">
+    <h1 id="label-pg" class="title gallery-title">Projects Gallery</h1>
+    <div class="gallery">
+      <ul id="vue-projects" class="projects-gallery">
+        <project-card
+          v-for="project in projectList"
+          :key="project.id"
+          :name="project.name"
+          :img="project.img"
+          :keywords="project.keywords"
+        ></project-card>
+      </ul>
+    </div>
+  </section>
+  <script src="src/scripts/main.js"></script>
 </body>
 </html>

@@ -54,3 +54,19 @@
     }
   }
 }
+
+#projects {
+  padding: 1em;
+  background-color: b.$light-orange;
+
+  .projects-gallery {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template: repeat(auto-fit, 1fr);
+
+    & > .card:nth-child(n+2) {
+      margin-top: 1em;
+    }
+  }
+}
