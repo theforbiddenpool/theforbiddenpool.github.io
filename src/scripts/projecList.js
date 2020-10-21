@@ -1,40 +1,40 @@
-import placeholder from '../../assets/placeholder.gif';
+import images from '../../assets/*.png';
 
 const projectList = [
   {
     id: 'fe-mp',
     name: 'Markdown Previewer',
-    img: placeholder,
+    img: images['sh_markdown-previewer'],
     tags: ['React', 'SCSS', 'Marked'],
   },
   {
     id: 'fe-pc',
     name: 'Pomodoro Clock',
-    img: placeholder,
+    img: images['sh_pomodoro-clock'],
     tags: ['React', 'React Hooks', 'SCSS'],
   },
   {
     id: 'fe-jc',
     name: 'JavaScript Calculator',
-    img: placeholder,
+    img: images['sh_javascript-calculator'],
     tags: ['React', 'SCSS'],
   },
   {
     id: 'rd-pl',
-    name: 'Product Landing',
-    img: placeholder,
+    name: 'Product Landing Page',
+    img: images['sh_product-landing-page'],
     tags: ['HTML', 'SCSS'],
   },
   {
     id: 'dv-cm',
     name: 'Choropleth Map',
-    img: placeholder,
+    img: images['sh_choropleth-map'],
     tags: ['JavaScript', 'D3.js', 'topojson'],
   },
   {
     id: 'am-et',
     name: 'Exercise Tracker',
-    img: placeholder,
+    img: images['sh_exercise-tracker'],
     tags: ['Node.js', 'Express.js', 'Mongoose'],
   },
 ];

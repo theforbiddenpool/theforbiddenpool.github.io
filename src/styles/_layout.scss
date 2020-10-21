@@ -56,16 +56,30 @@
 
 #projects {
   padding: 1em;
+  padding-top: 3em;
   background-color: b.$light-orange;
 
   .projects-gallery {
     list-style: none;
     padding-left: 0;
+    margin-top: 2.5em;
     display: grid;
-    grid-template: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 1em;
 
-    & > .card:nth-child(n+2) {
-      margin-top: 1em;
+    .card {
+      cursor: pointer;
+    }
+    
+    .bracket {
+      font-weight: 600;
+      color: b.$orange;
+      opacity: 0;
+      transition: opacity .3s ease-out;
+    }
+
+    .card:hover .bracket, .card:active .bracket {
+      opacity: 1;
     }
   }
 }

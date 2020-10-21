@@ -13,7 +13,11 @@ app.component('project-card', {
   template: `
     <li class="card">
       <img class="card-img" :src="img" :alt="name + ' screenshot'">
-      <div class="title card-title">{{ name }}</div>
+      <div class="title card-title">
+        <span class="bracket" aria-hidden="true">&#60;</span>
+        {{ name }}
+        <span class="bracket" aria-hidden="true">&#47;&#62;</span>
+      </div>
     </li>
   `,
 });
