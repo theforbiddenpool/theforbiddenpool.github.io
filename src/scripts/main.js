@@ -9,7 +9,7 @@ const app = Vue.createApp({
 });
 
 app.component('project-card', {
-  props: ['id', 'name', 'img', 'keywords'],
+  props: ['id', 'name', 'img', 'tags'],
   template: `
     <li class="card">
       <img class="card-img" :src="img" :alt="name + ' screenshot'">
@@ -17,6 +17,11 @@ app.component('project-card', {
         <span class="bracket" aria-hidden="true">&#60;</span>
         {{ name }}
         <span class="bracket" aria-hidden="true">&#47;&#62;</span>
+      </div>
+      <div class="card-tags" aria-label="technologies used">
+        <span class="tag" v-for="tg in tags">
+          {{ tg }}
+        </span>
       </div>
     </li>
   `,

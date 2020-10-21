@@ -34,6 +34,7 @@
   background-color: b.$dark-blue;
   color: b.$light-grey;
   font-weight: 500;
+  position: relative;
 
   &-img {
     width: 100%;
@@ -41,5 +42,20 @@
 
   &-title {
     padding: .75em;
+  }
+
+  &-tags {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: .5em;
+    
+    & > .tag {
+      background-color: rgba(b.$black, .5);
+      padding: .25em .66em;
+      margin-left: .5em;
+      border-radius: 1em;
+      font-size: .875rem;
+    }
   }
 }

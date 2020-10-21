@@ -66,9 +66,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     grid-gap: 1em;
-
+    
     .card {
       cursor: pointer;
+      transition: transform .2s ease-out;
+
+      &:active {
+        transform: scale(1.01);
+      }
     }
     
     .bracket {
