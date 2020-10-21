@@ -32,7 +32,8 @@
 
 .card {
   background-color: b.$dark-blue;
-  color: b.$white;
+  color: b.$light-grey;
+  font-weight: 500;
 
   &-img {
     width: 100%;
