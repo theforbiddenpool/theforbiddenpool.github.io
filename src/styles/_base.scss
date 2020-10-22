@@ -29,8 +29,20 @@ $light-grey: #f0f0f0;
   }
 }
 
+@mixin tag($bg-color) {
+  background-color: #{$bg-color};
+  padding: .25em .66em;
+  margin-left: .5em;
+  border-radius: 1em;
+  font-size: .875rem;
+} 
+
 .title {
   text-align: center;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 %anim-up-down {
