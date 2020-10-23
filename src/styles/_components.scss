@@ -73,48 +73,48 @@
   .modal-inner {
     width: 100%;
     background-color: b.$white;
+  }
+
+  .modal-header {
+    border-bottom: 1px solid b.$light-grey;
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
     
-    .modal-header {
-      border-bottom: 1px solid b.$light-grey;
-      width: 100%;
-      display: inline-flex;
-      justify-content: flex-end;
-      
-      .close {
-        padding: .75em;
-        text-align: right;
-        background-color: transparent;
-        border: 0;
-        cursor: pointer;
-      }
+    .close {
+      padding: .75em;
+      text-align: right;
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+
+  .modal-content {
+    padding: 1em;
+
+    & > *:nth-child(n+2) {
+      margin-top: 1em;
     }
     
-    .modal-content {
-      padding: 1em;
+    .modal-title > h1 {
+      margin-top: 0;
+    }
+    
+    .modal-img-group {
+      position: relative;
 
-      & > *:nth-child(n+2) {
-        margin-top: 1em;
+      & > .modal-img {
+        width: 100%;
+        border-radius: .875em;
       }
-      
-      .modal-title > h1 {
-        margin-top: 0;
-      }
-      
-      .modal-img-group {
-        position: relative;
+    }
 
-        & > .modal-img {
-          width: 100%;
-          border-radius: .875em;
-        }
-      }
-  
-      & > .modal-tags {
-        text-align: center;
-  
-        .tag {
-          @include b.tag(b.$light-blue);
-        }
+    & > .modal-tags {
+      text-align: center;
+
+      .tag {
+        @include b.tag(b.$light-blue);
       }
     }
   }
