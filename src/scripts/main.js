@@ -34,6 +34,9 @@ app.component('project-card', {
             </button>
           </div>
           <div class="modal-content">
+            <div class="modal-title title">
+              <h1>{{ name }}</h1>
+            </div>
             <div class="modal-img-group">
               <img class="modal-img" :src="img" :alt="name + ' screenshot'">
             </div>
