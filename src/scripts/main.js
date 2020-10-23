@@ -69,3 +69,8 @@ app.component('project-card', {
 });
 
 const vm = app.mount('#vue-projects');
+
+document.querySelector('#move-down > button').addEventListener('click', () => {
+  const scroll = document.querySelector('#projects').getBoundingClientRect().y;
+  window.scrollTo(0, scroll + window.pageYOffset);
+});
