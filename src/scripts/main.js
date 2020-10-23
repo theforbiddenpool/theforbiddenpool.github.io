@@ -41,7 +41,7 @@ app.component('project-card', {
               <img class="modal-img" :src="img" :alt="name + ' screenshot'">
               <a class="external-link" :href="url" aria-label="Visit project's website">
                 <i class="fas fa-external-link-alt fa-lg"></i>
-              <a>
+              </a>
             </div>
             <div class="modal-tags" aria-label="technologies used">
               <span class="tag" v-for="tg in tags">
