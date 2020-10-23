@@ -9,7 +9,7 @@ const app = Vue.createApp({
 });
 
 app.component('project-card', {
-  props: ['id', 'name', 'img', 'tags'],
+  props: ['id', 'name', 'img', 'tags', 'url'],
   template: `
     <li class="card" @click="modalOpen = true">
       <img class="card-img" :src="img" :alt="name + ' screenshot'">
@@ -39,6 +39,9 @@ app.component('project-card', {
             </div>
             <div class="modal-img-group">
               <img class="modal-img" :src="img" :alt="name + ' screenshot'">
+              <a class="external-link" :href="url" aria-label="Visit project's website">
+                <i class="fas fa-external-link-alt fa-lg"></i>
+              <a>
             </div>
             <div class="modal-tags" aria-label="technologies used">
               <span class="tag" v-for="tg in tags">
