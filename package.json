@@ -8,7 +8,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "parcel index.html"
+    "clean": "rm -rf dist .cache",
+    "dev": "parcel index.html",
+    "prebuild": "npm run clean",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "eslint": "^7.11.0",
