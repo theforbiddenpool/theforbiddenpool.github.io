@@ -65,15 +65,39 @@
   justify-content: center;
   overflow-y: hidden;
 
+  @include b.mdb-md() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &.modal-full {
     width: 100vw;
     height: 100vh;
     background-color: b.$white;
+
+    @include b.mdb-md() {
+      background-color: rgba(b.$black, 0.5);
+    }
   }
 
   .modal-inner {
     width: 100%;
     background-color: b.$white;
+
+    @include b.mdb-md() {
+      width: 75vw;
+      height: 85vh;
+    }
+
+    @include b.mdb-lg() {
+      width: 50vw;
+    }
+
+    @include b.mdb-xl() {
+      width: 40vw;
+      max-width: 650px;
+    }
   }
 
   .modal-header {
@@ -130,6 +154,8 @@
     .modal-img-group {
       position: relative;
       grid-area: screenshot;
+      max-width: 600px;
+      @include b.mx(auto);
 
       & > .modal-img {
         width: 100%;

@@ -28,6 +28,10 @@
     height: 250px;
     border-radius: 50%;
     border: 1px solid b.$black;
+
+    @include b.mdb-lg() {
+      height: 280px;
+    }
   }
 
   .profile-title {
@@ -36,8 +40,20 @@
     border-top: 1px solid b.$black;
     border-bottom: 1px solid b.$black;
     margin-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
+    @include b.px(1em);
+
+    @include b.mdb-md() {
+      @include b.px(2.5em);
+    }
+    
+    @include b.mdb-lg() {
+      @include b.px(4em);
+      font-size: 1.66rem;
+    }
+
+    @include b.mdb-xl() {
+      @include b.px(10em);
+    }
   }
 
   .down-arrow {
@@ -58,19 +74,28 @@
   padding: 1em;
   padding-top: 3em;
   background-color: b.$light-orange;
+  min-height: 100vh;
 
   .projects-gallery {
     list-style: none;
     padding-left: 0;
     margin-top: 2.5em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 1em;
 
-    @include b.mdb-landscape() {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    @include b.mdb-lg() {
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
+      margin-left: 2em;
+      margin-right: 2em;
     }
-    
+
+    @include b.mdb-xl() {
+      max-width: 1385px;
+      @include b.mx(auto);
+      padding-top: 1.5em;
+    }
+
     .card {
       cursor: pointer;
       transition: transform .2s ease-out;
@@ -101,8 +126,33 @@
   text-align: center;
   position: relative;
 
+  @include b.mdb-xs() {
+    padding-top: 15vh;
+  }
+
+  @include b.mdb-sm() {
+    @include b.px(3em);
+  }
+
+  @include b.mdb-md() {
+    padding-top: 25vh;
+  }
+
+  @include b.mdb-lg() {
+    @include b.px(5em);
+  }
+
+  @include b.mdb-xl() {
+    max-width: 1385px;
+    @include b.mx(auto);
+  }
+
   .email {
     word-break: break-all;
+
+    @include b.mdb-lg() {
+      margin-top: 1.5em;
+    }
 
     a, a:hover, a:visited {
       color: b.$main-blue;
@@ -122,6 +172,10 @@
     @include b.mdb-landscape() {
       top: 60%;
       left: 80%;
+    }
+
+    @include b.mdb-lg() {
+      left: 75%;
     }
   }
 }
