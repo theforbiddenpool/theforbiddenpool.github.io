@@ -9,7 +9,7 @@ const app = Vue.createApp({
 });
 
 app.component('project-card', {
-  props: ['id', 'name', 'img', 'tags', 'url'],
+  props: ['id', 'name', 'img', 'tags', 'url', 'description'],
   template: `
     <li class="card" @click="modalOpen = true">
       <img class="card-img" :src="img" :alt="name + ' screenshot'">
@@ -48,9 +48,7 @@ app.component('project-card', {
                 {{ tg }}
               </span>
             </div>
-            <div class="modal-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
+            <div class="modal-text" v-html="description">
             </div>
           </div>
         </div>
