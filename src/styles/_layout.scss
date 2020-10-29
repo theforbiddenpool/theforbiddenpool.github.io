@@ -143,8 +143,10 @@
   }
 
   @include b.mdb-xl() {
-    max-width: 1385px;
-    @include b.mx(auto);
+    .content {
+      max-width: 1385px;
+      @include b.mx(auto);
+    }
   }
 
   .email {
@@ -163,19 +165,43 @@
 
   .background {
     position: absolute;
-    top: 75%;
-    left: 60%;
-    width: 100px;
-    height: 100px;
     z-index: -1;
+    bottom: 0;
+    left: 0;
 
-    @include b.mdb-landscape() {
-      top: 60%;
-      left: 80%;
+    &#parallax {
+      top: 75%;
+      left: 60%;
+      width: 100px;
+      height: 100px;
+  
+      @include b.mdb-landscape() {
+        top: 60%;
+        left: 80%;
+      }
+  
+      @include b.mdb-lg() {
+        left: 75%;
+      }
     }
 
-    @include b.mdb-lg() {
-      left: 75%;
+    &#bg {
+      display: none;
+      width: 100%;
+      overflow: hidden;
+      
+      @include b.mdb-md() {
+        display: block;
+        height: 15vmin;
+      }
+      
+      @include b.mdb-lg() {
+        height: 20vmin;
+      }
+      
+      & > svg {
+        height: inherit;
+      }
     }
   }
 }
