@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf dist .cache",
-    "dev": "parcel index.html",
+    "dev": "yarn run clean && parcel -p 3000 index.html",
     "prebuild": "npm run clean",
     "build": "parcel build index.html"
   },
