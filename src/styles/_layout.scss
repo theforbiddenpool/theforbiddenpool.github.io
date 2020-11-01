@@ -181,38 +181,41 @@
     bottom: 0;
     left: 0;
 
-    &#parallax {
-      top: 75%;
-      left: 60%;
-      width: 100px;
-      height: 100px;
-  
-      @include b.mdb-landscape() {
-        top: 60%;
-        left: 80%;
-      }
-  
-      @include b.mdb-lg() {
-        left: 75%;
-      }
-    }
-
     &#bg {
-      display: none;
       width: 100%;
       overflow: hidden;
+      height: 40vmin;
+
+      @include b.mdb-landscape() {
+        display: none;
+      }
       
       @include b.mdb-md() {
-        display: block;
-        height: 15vmin;
+        height: 30vmin;
       }
       
       @include b.mdb-lg() {
-        height: 20vmin;
+        height: 35vmin;
+      }
+
+      @include b.mdb-xl() {
+        height: 40vmin
       }
       
       & > svg {
         height: inherit;
+
+        #svg-bg-img {
+          width: 200%;
+
+          @include b.mdb-sm() {
+            width: 150%;
+          }
+
+          @include b.mdb-md() {
+            width: 100%;
+          }
+        }
       }
     }
   }
