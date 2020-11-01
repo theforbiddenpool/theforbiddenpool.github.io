@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="assets/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="theforbiddenpool is a fullstack web developer. This is the theforbiddenpool's portfolio showcasing the best projects ever made.">
-  <link rel="stylesheet" href="src/styles/main.scss">
+  <link rel="apple-touch-icon" href="assets/logo192.png">
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="src/styles/main.scss">
   <script src="https://unpkg.com/vue@3.0.2"></script>
   <title>theforbiddenpool</title>
 </head>
@@ -43,6 +46,7 @@
   <section id="projects" aria-labelledby="label-pg">
     <h1 id="label-pg" class="title gallery-title">These are some of my projects...</h1>
     <div class="gallery">
+      <noscript>You need to enable JavaScript to run this app.</noscript>
       <ul id="vue-projects" class="projects-gallery">
         <project-card
           v-for="project in projectList"
