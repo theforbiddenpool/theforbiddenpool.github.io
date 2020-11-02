@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import images from '../../assets/*.png';
+import images from '../assets/*.png';
 
 const projectList = [
   {

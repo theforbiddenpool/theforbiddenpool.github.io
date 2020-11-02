@@ -88,6 +88,7 @@
     @include b.mdb-md() {
       width: 75vw;
       height: 85vh;
+      max-height: 900px;
     }
 
     @include b.mdb-lg() {
