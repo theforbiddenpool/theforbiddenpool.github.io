@@ -210,6 +210,12 @@ readers do not read off random characters that represent icons */
 .fa-envelope-square:before {
   content: "\f199"; }
 
+.fa-external-link-alt:before {
+  content: "\f35d"; }
+
+.fa-external-link-square-alt:before {
+  content: "\f360"; }
+
 .fa-free-code-camp:before {
   content: "\f2c5"; }
 

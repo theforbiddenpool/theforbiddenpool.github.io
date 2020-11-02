@@ -119,7 +119,7 @@
   .modal-content {
     padding: 1em;
     width: 100%;
-    max-height: 93vh;
+    max-height: 93%;
     overflow-y: auto;
     
     @include b.mdb-landscape() {
