@@ -208,16 +208,17 @@
       
       & > svg {
         height: inherit;
+        width: 100%;
 
         & > image {
-          width: 200% !important;
+          width: 200%;
 
           @include b.mdb-sm() {
-            width: 150% !important;
+            width: 150%;
           }
 
           @include b.mdb-md() {
-            width: 100% !important;
+            width: 100%;
           }
         }
       }
