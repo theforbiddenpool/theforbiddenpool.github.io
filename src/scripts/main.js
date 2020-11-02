@@ -58,7 +58,19 @@ app.component('project-card', {
   data() {
     return {
       modalOpen: false,
+      windowEventListener: null,
     };
+  },
+  watch: {
+    modalOpen(isModalOpen) {
+      if (isModalOpen) {
+        this.windowEventListener = window.addEventListener('keyup', (e) => {
+          if (e.key === 'Escape') this.modalOpen = false;
+        });
+      } else {
+        window.removeEventListener('keyup', this.windowEventListener);
+      }
+    },
   },
   directives: {
     'body-no-scroll': {
@@ -72,7 +84,7 @@ app.component('project-card', {
   },
 });
 
-const vm = app.mount('#vue-projects');
+app.mount('#vue-projects');
 
 document.querySelector('#move-down > button').addEventListener('click', () => {
   const scroll = document.querySelector('#projects').getBoundingClientRect().y;
