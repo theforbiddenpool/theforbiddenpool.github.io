@@ -54,6 +54,10 @@
     @include b.mdb-xl() {
       @include b.px(10em);
     }
+
+    @include b.mdb-4k() {
+      @include b.px(15em);
+    }
   }
 
   .down-arrow {
@@ -112,11 +116,15 @@
       margin-top: 2em;
     }
 
+    @include b.mdb-4k() {
+      max-width: 1800px;
+    }
+
     .card {
       cursor: pointer;
       transition: transform .2s ease-out;
 
-      &:active {
+      &:hover, &:active {
         transform: scale(1.01);
       }
     }

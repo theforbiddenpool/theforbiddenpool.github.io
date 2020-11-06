@@ -10,6 +10,10 @@
   padding-left: 0;
   font-size: 1.25rem;
 
+  @include b.mdb-4k() {
+    font-size: 1.75rem;
+  }
+
   .menu-item {
     padding: 0 .33em;
     transition: transform .3s ease-out;
@@ -119,7 +123,7 @@
   .modal-content {
     padding: 1em;
     width: 100%;
-    max-height: 93%;
+    max-height: calc(100vh - 50px);
     overflow-y: auto;
     
     @include b.mdb-landscape() {
@@ -134,8 +138,12 @@
       grid-gap: .5em;
     }
 
+    @include b.mdb-md() {
+      max-height: calc(85vh - 50px);
+    }
+
     & > *:nth-child(n+2) {
-      margin-top: 1em;
+      margin-top: 1.5em;
 
       @include b.mdb-landscape() {
         margin-top: initial;
@@ -190,10 +198,14 @@
   padding: .875em;
   bottom: 0;
   right: 0;
-  color: b.$black;
-  text-decoration: none;
-  
-  &:hover, &:visited {
+
+  & > a {
     color: b.$black;
+    text-decoration: none;
+    margin-left: .66em;
+    
+    &:hover, &:visited {
+      color: b.$black;
+    }
   }
 }

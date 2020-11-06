@@ -8,6 +8,7 @@ const projectList = [
     img: images['sh_markdown-previewer'],
     tags: ['React', 'SCSS', 'Marked'],
     url: 'https://theforbiddenpool.github.io/fcc-projects/front-end-libraries/markdown-previewer/',
+    gh: 'https://github.com/theforbiddenpool/fcc-projects/tree/master/front-end-libraries/markdown-previewer',
     description: `
       <p>
         It was my first React project. It was done as one of the <a href="https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer">FreeCodeCamp challenges</a> for the Frontend Libraries Certification.
@@ -23,6 +24,7 @@ const projectList = [
     img: images['sh_pomodoro-clock'],
     tags: ['React', 'React Hooks', 'SCSS'],
     url: 'https://theforbiddenpool.github.io/fcc-projects/front-end-libraries/pomodoro-clock/',
+    gh: 'https://github.com/theforbiddenpool/fcc-projects/tree/master/front-end-libraries/pomodoro-clock',
     description: `
       <p>
         The <a href="https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-25--5-clock">Pomodoro Clock project</a> was the last project of the Front End Libraries FCC Certification. It was my first time using a custom React Hook. I didn't learn about them in FreeCodeCamp, but they seemed the "new default" for React, so I decided to try them out.
@@ -38,6 +40,7 @@ const projectList = [
     img: images['sh_javascript-calculator'],
     tags: ['React', 'SCSS'],
     url: 'https://theforbiddenpool.github.io/fcc-projects/front-end-libraries/javascript-calculator/',
+    gh: 'https://github.com/theforbiddenpool/fcc-projects/tree/master/front-end-libraries/javascript-calculator',
     description: `
       <p>
         This project is the <a href="https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-javascript-calculator">4th project</a> of the FreeCodeCamp Front End Libraries Projects Certification. The goal was to build a calculator. Seemed simple enough, right?
@@ -53,6 +56,7 @@ const projectList = [
     img: images['sh_product-landing-page'],
     tags: ['HTML', 'SCSS', 'JavaScript'],
     url: 'https://theforbiddenpool.github.io/fcc-projects/responsive-web-design/product-landing-page/',
+    gh: 'https://github.com/theforbiddenpool/fcc-projects/tree/master/responsive-web-design/product-landing-page',
     description: `
       <p>
         It was one of the first projects I've ever built for FreeCodeCamp. This was the <a href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page">3rd project</a> for the first FCC certification.
@@ -68,6 +72,7 @@ const projectList = [
     img: images['sh_choropleth-map'],
     tags: ['JavaScript', 'D3.js', 'topojson'],
     url: 'https://theforbiddenpool.github.io/fcc-projects/data-visualization/choropleth-map/',
+    gh: 'https://github.com/theforbiddenpool/fcc-projects/tree/master/data-visualization/choropleth-map',
     description: `
       <p>
         The Choropleth Map project is part of the <a href="https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map">D3.js FreeCodeCamp module</a>. It is the 4th challenge.
@@ -83,6 +88,7 @@ const projectList = [
     img: images['sh_exercise-tracker'],
     tags: ['Node.js', 'Express.js', 'Mongoose'],
     url: 'https://guillermo-meardon.glitch.me/',
+    gh: 'https://github.com/theforbiddenpool/fcc-projects/tree/master/apis-and-microservices/exercise-tracker',
     description: `
       <p>
         The Exercise Tracker project is part of the <a href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/exercise-tracker">APIs and Microservices FreeCodeCamp</a> module. 
