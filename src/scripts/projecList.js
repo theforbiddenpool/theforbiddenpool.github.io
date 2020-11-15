@@ -87,14 +87,14 @@ const projectList = [
     name: 'Exercise Tracker',
     img: images['sh_exercise-tracker'],
     tags: ['Node.js', 'Express.js', 'Mongoose'],
-    url: 'https://guillermo-meardon.glitch.me/',
+    url: 'https://tfp-fcc-exercise-tracker.herokuapp.com/',
     gh: 'https://github.com/theforbiddenpool/fcc-projects/tree/master/apis-and-microservices/exercise-tracker',
     description: `
       <p>
         The Exercise Tracker project is part of the <a href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/exercise-tracker">APIs and Microservices FreeCodeCamp</a> module. 
       </p>
       <p>
-        It was the first backend project I struggled a lot with. I had to use Mongoose functionalities I hadn't previously worked with. But it taught me a lot about using Mongoose and Express. I got to try <code>express.Router()</code> for the first time. Overall, I think it works really well. I hope one day to build a better frontend to go with it.
+        It was the first backend project I struggled a lot with. I had to use Mongoose functionalities I hadn't previously worked with. But it taught me a lot about using Mongoose and Express. I got to try <code>express.Router()</code> for the first time and to use a better architecture. Overall, I think it works really well. Some time after I finished FCC, I decided to build a better frontend for it.
       </p>
     `,
   },
