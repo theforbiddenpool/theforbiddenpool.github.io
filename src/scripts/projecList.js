@@ -1,3 +1,4 @@
+/* eslint-disable dot-notation */
 // eslint-disable-next-line import/no-unresolved
 import images from '../assets/*.png';
 
@@ -35,18 +36,18 @@ const projectList = [
     `,
   },
   {
-    id: 'fe-jc',
-    name: 'JavaScript Calculator',
-    img: images['sh_javascript-calculator'],
-    tags: ['React', 'SCSS'],
-    url: 'https://theforbiddenpool.github.io/fcc-projects/front-end-libraries/javascript-calculator/',
-    gh: 'https://github.com/theforbiddenpool/fcc-projects/tree/master/front-end-libraries/javascript-calculator',
+    id: 'fe-to',
+    name: 'Toast Notifications',
+    img: images['sh_toastarino'],
+    tags: ['JavaScript', 'Class syntax', 'Async/Await'],
+    url: '',
+    gh: 'https://github.com/theforbiddenpool/toastarino',
     description: `
       <p>
-        This project is the <a href="https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-javascript-calculator">4th project</a> of the FreeCodeCamp Front End Libraries Projects Certification. The goal was to build a calculator. Seemed simple enough, right?
+        After I was done with the FreeCodeCamp course, I needed to keep doing different type of projects to enrich my portfolio and knowledge. I've always been curious about how toast notifications worked, so I decided to make my own.
       </p>
       <p>
-        I only had used React once in my <a href="https://theforbiddenpool.github.io/fcc-projects/front-end-libraries/markdown-previewer/">Markdown Previewer project</a>, so the knowledge was still very raw. The idea of building a calculator seemed easy, but every time I thought I had it right there was another edge case I needed to cover. I had a great time with it. In the future, I want to go through the code and see what I can improve.
+        I had never really used the <code>class</code> JavaScript syntax before, so I decided to go with it for this project. I was surprised how much easier was to make everything work than I had originally thought, besides the <code>reposition()</code> function and the timer itself. I remembered reading an article about how <code>tranform</code> had better performance, so I chose <code>transform</code> over <code>top</code>. I hope one day to turn this project into a npm package.
       </p>
     `,
   },

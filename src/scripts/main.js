@@ -43,7 +43,7 @@ app.component('project-card', {
                 <a :href="gh" title="GitHub repository" aria-label="GitHub repo">
                   <i class="fab fa-github fa-lg"></i>
                 </a>
-                <a :href="url" title="View project" aria-label="Visit project's website">
+                <a v-if="url !== ''" :href="url" title="View project" aria-label="Visit project's website">
                   <i class="fas fa-external-link-alt fa-lg"></i>
                 </a>
               </div>
