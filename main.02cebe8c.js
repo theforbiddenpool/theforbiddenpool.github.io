@@ -3,17 +3,17 @@ module.exports="/logo192.1a6f93a8.png";
 },{}],"rrEa":[function(require,module,exports) {
 module.exports="/logo512.a430a0d1.png";
 },{}],"AynT":[function(require,module,exports) {
-module.exports="/sh_choropleth-map.127e8f57.png";
+module.exports="/sh_choropleth-map.2690c8d2.png";
 },{}],"VNST":[function(require,module,exports) {
-module.exports="/sh_exercise-tracker.f3f23112.png";
+module.exports="/sh_exercise-tracker.d77a5594.png";
 },{}],"Zv41":[function(require,module,exports) {
-module.exports="/sh_markdown-previewer.de083694.png";
+module.exports="/sh_markdown-previewer.739691f7.png";
 },{}],"IbVZ":[function(require,module,exports) {
-module.exports="/sh_pomodoro-clock.ef7f5546.png";
+module.exports="/sh_pomodoro-clock.d40f83cc.png";
 },{}],"Ibox":[function(require,module,exports) {
-module.exports="/sh_product-landing-page.bb748bb4.png";
+module.exports="/sh_product-landing-page.65b845ae.png";
 },{}],"M4Mn":[function(require,module,exports) {
-module.exports="/sh_toastarino.75a71935.png";
+module.exports="/sh_toastarino.4cc4f3e3.png";
 },{}],"fFPQ":[function(require,module,exports) {
 module.exports={logo192:require("./logo192.png"),logo512:require("./logo512.png"),"sh_choropleth-map":require("./sh_choropleth-map.png"),"sh_exercise-tracker":require("./sh_exercise-tracker.png"),"sh_markdown-previewer":require("./sh_markdown-previewer.png"),"sh_pomodoro-clock":require("./sh_pomodoro-clock.png"),"sh_product-landing-page":require("./sh_product-landing-page.png"),sh_toastarino:require("./sh_toastarino.png")};
 },{"./logo192.png":"jbLM","./logo512.png":"rrEa","./sh_choropleth-map.png":"AynT","./sh_exercise-tracker.png":"VNST","./sh_markdown-previewer.png":"Zv41","./sh_pomodoro-clock.png":"IbVZ","./sh_product-landing-page.png":"Ibox","./sh_toastarino.png":"M4Mn"}],"jXjr":[function(require,module,exports) {
@@ -21,4 +21,4 @@ module.exports={logo192:require("./logo192.png"),logo512:require("./logo512.png"
 },{"../assets/*.png":"fFPQ"}],"wgsO":[function(require,module,exports) {
 "use strict";var n=e(require("./projecList"));function e(n){return n&&n.__esModule?n:{default:n}}var t=Vue.createApp({data:function(){return{projectList:n.default}}});t.component("project-card",{props:["id","name","img","tags","url","gh","description"],template:'\n    <li class="card" @click="modalOpen = true">\n      <img class="card-img" :src="img" :alt="name + \' screenshot\'">\n      <div class="title card-title">\n        <span class="bracket" aria-hidden="true">&#60;</span>\n        {{ name }}\n        <span class="bracket" aria-hidden="true">&#47;&#62;</span>\n      </div>\n      <div class="card-tags" aria-label="technologies used">\n        <span class="tag" v-for="tg in tags">\n          {{ tg }}\n        </span>\n      </div>\n    </li>\n\n    <teleport to="body">\n      <div v-if="modalOpen" v-body-no-scroll class="modal modal-full" @click.self="modalOpen = false">\n        <div class="modal-inner">\n          <div class="modal-header">\n            <button type="button" class="close" aria-label="Close" @click="modalOpen = false">\n              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>\n            </button>\n          </div>\n          <div class="modal-content">\n            <div class="modal-title title">\n              <h1>{{ name }}</h1>\n            </div>\n            <div class="modal-img-group">\n              <img class="modal-img" :src="img" :alt="name + \' screenshot\'">\n              <div class="external-link">\n                <a :href="gh" title="GitHub repository" aria-label="GitHub repo">\n                  <i class="fab fa-github fa-lg"></i>\n                </a>\n                <a v-if="url !== \'\'" :href="url" title="View project" aria-label="Visit project\'s website">\n                  <i class="fas fa-external-link-alt fa-lg"></i>\n                </a>\n              </div>\n            </div>\n            <div class="modal-tags" aria-label="technologies used">\n              <span class="tag" v-for="tg in tags">\n                {{ tg }}\n              </span>\n            </div>\n            <div class="modal-text" v-html="description">\n            </div>\n          </div>\n        </div>\n      </div>\n    </teleport>\n  ',data:function(){return{modalOpen:!1,windowEventListener:null}},watch:{modalOpen:function(n){var e=this;n?this.windowEventListener=window.addEventListener("keyup",function(n){"Escape"===n.key&&(e.modalOpen=!1)}):window.removeEventListener("keyup",this.windowEventListener)}},directives:{"body-no-scroll":{mounted:function(){document.body.classList.add("no-scroll")},unmounted:function(){document.body.classList.remove("no-scroll")}}}}),t.mount("#vue-projects"),document.querySelector("#move-down > button").addEventListener("click",function(){var n=document.querySelector("#projects").getBoundingClientRect().y;window.scrollTo(0,n+window.pageYOffset)});
 },{"./projecList":"jXjr"}]},{},["wgsO"], null)
-//# sourceMappingURL=/main.dd75af5a.js.map
+//# sourceMappingURL=/main.02cebe8c.js.map
