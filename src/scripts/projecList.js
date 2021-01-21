@@ -36,18 +36,18 @@ const projectList = [
     `,
   },
   {
-    id: 'fe-to',
-    name: 'Toast Notifications',
-    img: images['sh_toastarino'],
-    tags: ['JavaScript', 'Class syntax', 'Async/Await'],
-    url: '',
-    gh: 'https://github.com/theforbiddenpool/toastarino',
+    id: 'fe-et',
+    name: 'Ethmoid',
+    img: images['sh_ethmoid'],
+    tags: ['TypeScript', 'Webpack', 'BEM', 'FileReader'],
+    url: 'https://www.theforbiddenpool.com/ethmoid/',
+    gh: 'https://github.com/theforbiddenpool/ethmoid',
     description: `
       <p>
-        After I was done with the FreeCodeCamp course, I needed to keep doing different type of projects to enrich my portfolio and knowledge. I've always been curious about how toast notifications worked, so I decided to make my own.
+        In one of my freelance projects I was required to work with the <a href="https://github.com/gitbrent/PptxGenJS/">PptxGenJS</a> library. To learn how to use it I made this project.
       </p>
       <p>
-        I had never really used the <code>class</code> JavaScript syntax before, so I decided to go with it for this project. I was surprised how much easier was to make everything work than I had originally thought, besides the <code>reposition()</code> function and the timer itself. I remembered reading an article about how <code>tranform</code> had better performance, so I chose <code>transform</code> over <code>top</code>. I hope one day to turn this project into a npm package.
+        I had also just started learning TypeScript, and had read about BEM. It seemed like the perfect opportunity to put some of my knowledge in work. Besides taking in data, and shooting out a PowerPoint, I added some customization options, which forced me to work with the <code>FileReader</code> Browser API. I would also have liked to be able to add a previewer, but after hours of investigation I couldn't find a way without changing too much of my current implementation. I hope one day to be able to implement such thing.
       </p>
     `,
   },
